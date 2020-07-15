@@ -16,19 +16,22 @@ variables:
   # Configure this variable in Secure Variables:
   # OPENSHIFT_TOKEN: my.openshift.token
 
-test1:
-  stage: test
+compile:
+  image: node-14-slim:latest
+  stage: build
   before_script: []
   script:
-    - echo run tests
+    - npm run build
 
-test2:
+test:
+  image: node-14-slim:latest
   stage: test
   before_script: []
   script:
-    - echo run tests
+    - npm run test
 
 .deploy: &deploy
+  image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
   before_script:
     - oc login "$OPENSHIFT_SERVER" --token="$OPENSHIFT_TOKEN" --insecure-skip-tls-verify
     - oc project "$CI_PROJECT_NAME-$CI_PROJECT_ID" 2> /dev/null || oc new-project "$CI_PROJECT_NAME-$CI_PROJECT_ID"
@@ -38,6 +41,7 @@ test2:
     - "oc get routes $APP 2> /dev/null || oc expose service $APP --hostname=$APP_HOST"
 
 review:
+  image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
   <<: *deploy
   stage: review
   variables:
@@ -53,6 +57,7 @@ review:
     - master
 
 stop-review:
+  image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
   <<: *deploy
   stage: cleanup
   script:
@@ -70,6 +75,7 @@ stop-review:
     - master
 
 staging:
+  image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
   <<: *deploy
   stage: staging
   variables:
@@ -82,6 +88,7 @@ staging:
     - master
 
 production:
+  image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
   <<: *deploy
   stage: production
   variables:
