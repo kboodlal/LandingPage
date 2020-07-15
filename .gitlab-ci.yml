@@ -18,7 +18,7 @@ variables:
   OPENSHIFT_SERVER: ocp.csa.spawar.navy.mil
   # OPENSHIFT_DOMAIN: apps.example.com
   # Configure this variable in Secure Variables:
-   OPENSHIFT_TOKEN: KuKKbYYkJ77NJ00WbOHkTE0rdLbPu25205TQsbu-5QQ
+  OPENSHIFT_TOKEN: KuKKbYYkJ77NJ00WbOHkTE0rdLbPu25205TQsbu-5QQ
 compile:
   image: node:current
   stage: build
