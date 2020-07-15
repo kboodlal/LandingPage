@@ -1,6 +1,10 @@
 # This file is a template, and might need editing before it works on your project.
 image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
 
+cache:
+  paths:
+    - node_modules
+
 stages:
   - build  # dummy stage to follow the template guidelines
   - test
@@ -21,6 +25,7 @@ compile:
   stage: build
   before_script: []
   script:
+    - npm install
     - npm run build
 
 test:
