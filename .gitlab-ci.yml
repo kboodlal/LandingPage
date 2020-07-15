@@ -21,7 +21,7 @@ variables:
   # OPENSHIFT_TOKEN: my.openshift.token
 
 compile:
-  image: node:current-slim
+  image: node:current
   stage: build
   before_script: []
   script:
@@ -29,7 +29,7 @@ compile:
     - npm run build
 
 test:
-  image: node:current-slim
+  image: node:current
   stage: test
   before_script: []
   script:
