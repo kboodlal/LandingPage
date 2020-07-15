@@ -19,7 +19,6 @@ variables:
   # OPENSHIFT_DOMAIN: apps.example.com
   # Configure this variable in Secure Variables:
   # OPENSHIFT_TOKEN: my.openshift.token
-
 compile:
   image: node:current
   stage: build
@@ -32,8 +31,10 @@ test:
   image: node:current
   stage: test
   before_script: []
+  allow_failure: true
   script:
-    - npm run test
+    - export CI=true
+    - npm test
 
 .deploy: &deploy
   image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
