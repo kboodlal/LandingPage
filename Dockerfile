@@ -4,6 +4,8 @@ FROM node:13.12.0-alpine
 # set working directory
 WORKDIR /home/node
 
+USER node
+
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH ./node_modules/.bin:$PATH
 
@@ -18,7 +20,7 @@ COPY . ./
 
 EXPOSE 3000/tcp
 
-USER node
+sudo chown -R $USER:$(id -gn $USER) /.config
 
 # start app
 CMD ["npm", "start"]
