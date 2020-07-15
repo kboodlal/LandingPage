@@ -9,14 +9,12 @@ import LayoutDefault from './layouts/LayoutDefault';
 // Views 
 import Home from './views/Home';
 
-
 const App = () => {
 
   const childRef = useRef();
   let location = useLocation();
 
   useEffect(() => {
-    let page = location.pathname;
     document.body.classList.add('is-loaded')
     childRef.current.init();
     // eslint-disable-next-line react-hooks/exhaustive-deps
