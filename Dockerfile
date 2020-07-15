@@ -18,5 +18,7 @@ COPY . ./
 
 EXPOSE 3000/tcp
 
+USER node
+
 # start app
 CMD ["npm", "start"]
