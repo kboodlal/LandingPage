@@ -20,7 +20,7 @@ COPY . ./
 
 EXPOSE 3000/tcp
 
-sudo chown -R $USER:$(id -gn $USER) /.config
+RUN sudo chown -R $USER:$(id -gn $USER) /.config
 
 # start app
 CMD ["npm", "start"]
