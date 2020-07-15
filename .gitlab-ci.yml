@@ -17,14 +17,14 @@ variables:
   # OPENSHIFT_TOKEN: my.openshift.token
 
 compile:
-  image: current-slim:latest
+  image: node:current-slim
   stage: build
   before_script: []
   script:
     - npm run build
 
 test:
-  image: current-slim:latest
+  image: node:current-slim
   stage: test
   before_script: []
   script:
