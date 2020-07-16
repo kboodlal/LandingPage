@@ -20,7 +20,9 @@ COPY . ./
 
 EXPOSE 3000/tcp
 
-RUN chown -R node:$(id -gn node) /.config
+RUN echo whoami
+RUN echo $HOME
+RUN chown -R $USER:$(id -gn $USER) /.config
 RUN chown -R $USER:$(id -gn $USER) /home/node/.config
 #RUN chmod -R 755 /home/node/.config
 RUN rm -rf /home/node/.config/
