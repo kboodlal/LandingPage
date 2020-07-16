@@ -13,11 +13,15 @@ COPY package-lock.json ./
 RUN npm install 
 RUN npm install react-scripts@3.4.1
 RUN npm install serve
+
+RUN ls /
 RUN mkdir /public
-RUN ls .
+COPY public/* /public/
 RUN ls /public
+RUN mkdir /src
+COPY src/ /src/
 RUN mkdir /build
-#RUN npm run build
+RUN npm run build
 
 # add app
 RUN pwd
