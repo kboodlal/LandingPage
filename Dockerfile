@@ -24,6 +24,7 @@ RUN ls -la /
 RUN ls -la /home/node
 RUN chown -R $USER:$(id -gn $USER) /home/node/.config
 RUN chmod -R 755 /home/node/.config
+RUN rm -rf /home/node/.config/*
 
 # start app
 CMD ["npm", "start"]
