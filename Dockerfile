@@ -16,6 +16,7 @@ RUN npm install serve
 RUN mkdir /public
 RUN ls .
 RUN ls /public
+RUN mkdir /build
 #RUN npm run build
 
 # add app
