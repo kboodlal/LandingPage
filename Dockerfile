@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:current
+FROM node:13.12.0-alpine
 
 # set working directory
 WORKDIR /home/node
@@ -12,8 +12,9 @@ ENV PATH ./node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install --silent
+RUN npm install 
 RUN npm install react-scripts@3.4.1 --silent
+RUN npm install serve
 
 # add app
 RUN pwd
@@ -31,4 +32,5 @@ RUN ls -la /
 
 
 # start app
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
+CMD ["./node_modules/.bin/serve", "-p", "3000", "-s", "build"]
