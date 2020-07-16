@@ -20,11 +20,11 @@ COPY . ./
 
 EXPOSE 3000/tcp
 
-RUN ls -la /
-RUN ls -la /home/node
-RUN chown -R $USER:$(id -gn $USER) /home/node/.config
-RUN chmod -R 755 /home/node/.config
-RUN rm -rf /home/node/.config/*
+#RUN chown -R $USER:$(id -gn $USER) /home/node/.config
+#RUN chmod -R 755 /home/node/.config
+RUN rm -rf /home/node/.config/
+
+USER root
 
 # start app
 CMD ["npm", "start"]
