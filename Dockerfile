@@ -23,7 +23,7 @@ EXPOSE 3000/tcp
 RUN whoami
 RUN echo $HOME
 RUN rm -rf /home/node/.config/
-RUN chown -R $USER:$(id -gn $USER) /home/node/.config
+#RUN chown -R $USER:$(id -gn $USER) /home/node/.config
 #RUN chmod -R 755 /home/node/.config
 
 
