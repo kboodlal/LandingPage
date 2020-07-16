@@ -24,7 +24,6 @@ RUN whoami
 RUN echo $HOME
 RUN which npm
 RUN ls -la /
-RUN mkdir /home/node/.config
 RUN chown -R $USER:$(id -gn $USER) /home/node/.config
 RUN mkdir /.config
 RUN chown -R $USER:$(id -gn $USER) /.config
