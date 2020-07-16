@@ -27,8 +27,8 @@ RUN ls -la /
 RUN chown -R $USER:$(id -gn $USER) /home/node/.config
 USER root
 RUN mkdir /.config
+RUN  chown -R $USER:$(id -gn $USER) /.config
 USER node
-RUN chown -R $USER:$(id -gn $USER) /.config
 
 
 # start app
