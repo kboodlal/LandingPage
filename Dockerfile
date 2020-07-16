@@ -28,4 +28,4 @@ RUN rm -rf /home/node/.config/
 
 
 # start app
-CMD ["npm", "start"]
+ENTRYPOINT ["npm", "start"]
