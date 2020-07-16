@@ -15,6 +15,7 @@ COPY package-lock.json ./
 RUN npm install 
 RUN npm install react-scripts@3.4.1 --silent
 RUN npm install serve
+RUN npm run build
 
 # add app
 RUN pwd
