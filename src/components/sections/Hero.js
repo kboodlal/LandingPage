@@ -72,9 +72,6 @@ const Hero = ({
                   <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
                     Get started
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
-                    </Button>
                 </ButtonGroup>
               </div>
             </div>
