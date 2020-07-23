@@ -86,6 +86,15 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           <Logo />
+          <div class="dropdown">
+            <button class="dropbtn">Services</button>
+            <div class="dropdown-content">
+              <a href="#split-item">Accounts</a>
+              <a href="#split-item">ATO Accreditaion</a>
+              <a href="#split-item">DevSecOps</a>
+              <a href="#split-item">...</a>
+            </div>
+          </div>
           {!hideNav &&
             <>
               <button
@@ -112,7 +121,34 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
+                      <Link to="#0" onClick={closeMenu}>Getting Started</Link>
+                    </li>
+                  </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
                       <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                    </li>
+                  </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>Contact</Link>
+                    </li>
+                  </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>FAQ</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
