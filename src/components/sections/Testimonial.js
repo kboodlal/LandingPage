@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
-import SectionHeader from './partials/SectionHeader';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -30,17 +29,6 @@ const Testimonial = ({
     hasBgColor && 'has-bg-color',
     invertColor && 'invert-color',
     className
-  );
-
-  const innerClasses = classNames(
-    'testimonial-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
-  );
-
-  const tilesClasses = classNames(
-    'tiles-wrap',
-    pushLeft && 'push-left'
   );
 
   return (
