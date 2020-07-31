@@ -24,7 +24,7 @@ compile:
   stage: build
   before_script: []
   script:
-    - npm install
+    - npm ci
     - npm run build
 
 test:
