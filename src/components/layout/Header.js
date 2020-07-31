@@ -86,12 +86,12 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           <Logo />
-          <div class="dropdown">
-            <button class="dropbtn">Services</button>
-            <div class="dropdown-content">
-              <a href="#split-item">Accounts</a>
-              <a href="#split-item">ATO Accreditaion</a>
-              <a href="#split-item">DevSecOps</a>
+          <div className="dropdown">
+            <button className="dropbtn">Services</button>
+            <div className="dropdown-content">
+            <a href="#devsecops">DevSecOps</a>
+            <a href="#ato-accreditation">ATO Accreditation</a>
+              <a href="#digital-twin">Digital Twin</a>
               <a href="#split-item">...</a>
             </div>
           </div>

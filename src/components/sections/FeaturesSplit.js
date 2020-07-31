@@ -64,7 +64,7 @@ const FeaturesSplit = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
 
-            <div className="split-item">
+            <div className="split-item" id="devsecops">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Security
@@ -92,7 +92,7 @@ to get your application into production.
               </div>
             </div>
 
-            <div className="split-item">
+            <div className="split-item" id="ato-accreditation">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Compliance
@@ -118,7 +118,7 @@ to get your application into production.
               </div>
             </div>
 
-            <div className="split-item">
+            <div className="split-item" id="digital-twin">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Virtual Environment
