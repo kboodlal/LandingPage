@@ -18,7 +18,6 @@ variables:
   OPENSHIFT_SERVER: ocp.csa.spawar.navy.mil
   OPENSHIFT_DOMAIN: ocp.csa.spawar.navy.mil
   # Configure this variable in Secure Variables:
-  OPENSHIFT_TOKEN: XCwRrjcTna4EUjhh8hL77oyB6cpIfQJxh4wYnF_8iEg
   
 compile:
   image: node:current
@@ -40,7 +39,7 @@ test:
 .deploy: &deploy
   image: spork.spawar.navy.mil/bblaine/csa-tools-image/csa-tools-image:latest
   before_script:
-    - oc login "$OPENSHIFT_SERVER" --token="$OPENSHIFT_TOKEN" --insecure-skip-tls-verify
+    - oc login "$OPENSHIFT_SERVER" --token=$OPENSHIFT_TOKEN --insecure-skip-tls-verify
     - oc project "$CI_PROJECT_NAME-$CI_PROJECT_ID" 2> /dev/null || oc new-project "$CI_PROJECT_NAME-$CI_PROJECT_ID"
   script:
     - "oc get services $APP 2> /dev/null || oc new-app . --name=$APP --strategy=docker"
