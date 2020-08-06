@@ -137,10 +137,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    DAS
+                    Placeholder
                     </h4>
                   <p className="m-0 text-sm">
-                    With DaaS, you get high quality data that you can access and change easily while keeping it protected.
+                    Placeholder
                     </p>
                 </div>
               </div>
