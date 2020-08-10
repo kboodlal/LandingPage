@@ -3,20 +3,27 @@
 // The color palette
 $palette: (
 	light: (
-		1: #ECEDED,
-		2: #9CA9B3,
-		3: #717D86
+		1: rgb(0, 0, 0), //Main Header
+		2: rgb(0, 0, 0), //Subtext
+		3: #717D86,
+		4: #FFFFFF, //Text in header 
+		5: hsl(206, 17%, 8%) //Text in buttons
 	),
 	dark: (
-		1: #151719,
+		1: hsl(200, 5%, 88%), //Section 1 background color
 		2: #25282C,
 		3: #33363A
+
 	),
 	primary: (
-		1: #6163FF,
+		1: #b3d4db, //Color for buttons
 		2: #ACADFF,
-		3: #5658DD,
-		4: #E9E9FF
+		3: #444c75, //SubHeaders for "Noble Services"
+		4: #E9E9FF,
+		5: hsl(209, 17%, 67%), //Section 2 color
+		6: hsl(17, 6%, 79%), //Section 3 color
+		7: hsl(200, 5%, 88%), //Header circles
+		8: lighten(rgb(65, 111, 155), 25%) //Color for buttons on hover
  	),
 	secondary: (
 		1: #24E5AF,

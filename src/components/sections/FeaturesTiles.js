@@ -93,7 +93,7 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    ATO Accrediation
+                    ATO Accreditation
                     </h4>
                   <p className="m-0 text-sm">
                    We guide you through the entire ATO process to get your application in the hands of the users faster and with fewer errors.
@@ -137,10 +137,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    DAS
+                    Placeholder
                     </h4>
                   <p className="m-0 text-sm">
-                    With DaaS, you get high quality data that you can access and change easily while keeping it protected.
+                    Placeholder
                     </p>
                 </div>
               </div>
