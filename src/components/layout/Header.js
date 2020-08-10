@@ -88,7 +88,7 @@ const Header = ({
           )}
         >
           <Logo />
-          <div className="dropdown">
+          {/* <div className="dropdown">
             <button className="dropbtn">Services</button>
             <div className="dropdown-content">
               <a href="/#devsecops">DevSecOps</a>
@@ -96,7 +96,7 @@ const Header = ({
               <a href="/#digital-twin">Digital Twin</a>
               <a href="/#split-item">...</a>
             </div>
-          </div>
+          </div> */}
           {!hideNav && (
             <>
               <button
@@ -121,20 +121,8 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="#0" onClick={closeMenu}>
-                        Getting Started
-                      </Link>
-                    </li>
-                  </ul>
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
-                    <li>
-                      <Link to="/document" onClick={closeMenu}>
-                        Documentation
+                      <Link to="/">
+                        <h5 style={styles.noble_logo}>NOBLE</h5>
                       </Link>
                     </li>
                   </ul>
@@ -146,7 +134,7 @@ const Header = ({
                   >
                     <li>
                       <Link to="#0" onClick={closeMenu}>
-                        Contact
+                        Features
                       </Link>
                     </li>
                   </ul>
@@ -157,8 +145,44 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="/faq" onClick={closeMenu}>
-                        FAQ
+                      <Link to="#0" onClick={closeMenu}>
+                        Services
+                      </Link>
+                    </li>
+                  </ul>
+                  <ul
+                    className={classNames(
+                      "list-reset text-xs",
+                      navPosition && `header-nav-${navPosition}`
+                    )}
+                  >
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>
+                        Applications
+                      </Link>
+                    </li>
+                  </ul>
+                  <ul
+                    className={classNames(
+                      "list-reset text-xs",
+                      navPosition && `header-nav-${navPosition}`
+                    )}
+                  >
+                    <li>
+                      <Link to="/learnmore" onClick={closeMenu}>
+                        Learn More
+                      </Link>
+                    </li>
+                  </ul>
+                  <ul
+                    className={classNames(
+                      "list-reset text-xs",
+                      navPosition && `header-nav-${navPosition}`
+                    )}
+                  >
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>
+                        Get Started
                       </Link>
                     </li>
                   </ul>
@@ -167,10 +191,10 @@ const Header = ({
                       <li>
                         <Link
                           to="#0"
-                          className="button button-primary button-wide-mobile button-sm"
+                          // className="button button-primary button-wide-mobile button-sm"
                           onClick={closeMenu}
                         >
-                          Sign up
+                          Log In
                         </Link>
                       </li>
                     </ul>
@@ -188,4 +212,9 @@ const Header = ({
 Header.propTypes = propTypes;
 Header.defaultProps = defaultProps;
 
+const styles = {
+  noble_logo: {
+    color: "white",
+  },
+};
 export default Header;

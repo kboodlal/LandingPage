@@ -9,7 +9,7 @@ import LayoutDefault from "./layouts/LayoutDefault";
 // Views
 import Home from "./views/Home";
 import Documentation from "./views/Documentation";
-import FAQ from "./views/FAQ";
+import LearnMore from "./views/LearnMore";
 
 const App = () => {
   const childRef = useRef();
@@ -33,7 +33,12 @@ const App = () => {
             component={Documentation}
             layout={LayoutDefault}
           />
-          <AppRoute exact path="/faq" component={FAQ} layout={LayoutDefault} />
+          <AppRoute
+            exact
+            path="/learnmore"
+            component={LearnMore}
+            layout={LayoutDefault}
+          />
         </Switch>
       )}
     />

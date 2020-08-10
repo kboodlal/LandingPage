@@ -60,7 +60,7 @@ const DevSecOps = ({
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              Dev Sec Ops
+              DevSecOps
             </h1>
             <div className="container-xs">
               <p

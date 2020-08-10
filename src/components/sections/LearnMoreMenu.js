@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
-import { Link as a } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { findLastIndex } from "lodash";
 
 const propTypes = {
@@ -12,7 +12,7 @@ const defaultProps = {
   ...SectionProps.defaults,
 };
 
-const FAQSectionHeader = ({
+const LearnMoreMenu = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -47,22 +47,16 @@ const FAQSectionHeader = ({
                 <a href="#aboutNOBLE">About NOBLE</a>
               </div>
               <div style={styles.item}>
-                <a href="#features">Features</a>
+                <a href="#features">News</a>
               </div>
               <div style={styles.item}>
-                <a href="#services">Services</a>
-              </div>
-              <div style={styles.item}>
-                <a to="#0">Applications</a>
-              </div>
-              <div style={styles.item}>
-                <a to="#0">Legacy Systems</a>
+                <Link to="/document">Documentation</Link>
               </div>
               <div style={styles.item}>
                 <a to="#0">Pricing</a>
               </div>
               <div style={styles.item}>
-                <a to="#0">Getting Started</a>
+                <a to="#0">Legacy Systems</a>
               </div>
             </div>
           </h4>
@@ -77,15 +71,15 @@ const FAQSectionHeader = ({
   );
 };
 
-FAQSectionHeader.propTypes = propTypes;
-FAQSectionHeader.defaultProps = defaultProps;
+LearnMoreMenu.propTypes = propTypes;
+LearnMoreMenu.defaultProps = defaultProps;
 
 const styles = {
   container: {
     display: "flex",
   },
   item: {
-    padding: "5px",
+    padding: "20px",
   },
 };
-export default FAQSectionHeader;
+export default LearnMoreMenu;
