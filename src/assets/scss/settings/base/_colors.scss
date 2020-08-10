@@ -16,13 +16,14 @@ $palette: (
 
 	),
 	primary: (
-		1: #b3d4db,
+		1: #b3d4db, //Color for buttons
 		2: #ACADFF,
 		3: #444c75, //SubHeaders for "Noble Services"
 		4: #E9E9FF,
 		5: hsl(209, 17%, 67%), //Section 2 color
 		6: hsl(17, 6%, 79%), //Section 3 color
-		7: hsl(200, 5%, 88%) //Header circles
+		7: hsl(200, 5%, 88%), //Header circles
+		8: lighten(rgb(65, 111, 155), 25%) //Color for buttons on hover
  	),
 	secondary: (
 		1: #24E5AF,
