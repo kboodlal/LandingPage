@@ -20,7 +20,8 @@ $palette: (
   ),
   primary: (
     1: #b3d4db,
-    2: #acadff,
+    //Color for buttons
+      2: #acadff,
     3: #444c75,
     //SubHeaders for "Noble Services"
       4: #e9e9ff,
@@ -28,7 +29,9 @@ $palette: (
     //Section 2 color
       6: hsl(17, 6%, 79%),
     //Section 3 color
-      7: hsl(200, 5%, 88%) //Header circles,
+      7: hsl(200, 5%, 88%),
+    //Header circles
+      8: lighten(rgb(65, 111, 155), 25%) //Color for buttons on hover,
   ),
   secondary: (
     1: #24e5af,
@@ -92,7 +95,7 @@ $icon--color: (
   // accordion icon
     social-inverse: null,
   // social icons
-    social-hover-inverse: null // social icons (:hover),
+    social-hover-inverse: null // social icons (:hover),,
 );
 
 // Misc elements: background color
