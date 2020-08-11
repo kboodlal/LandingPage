@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import AboutNOBLE from "../components/sections/AboutNoble";
 import LearnMoreMenu from "../components/sections/LearnMoreMenu";
 

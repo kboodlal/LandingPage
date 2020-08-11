@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import { Link } from "react-router-dom";
-import { findLastIndex } from "lodash";
 
 const propTypes = {
   ...SectionProps.types,
@@ -53,10 +52,10 @@ const LearnMoreMenu = ({
                 <Link to="/document">Documentation</Link>
               </div>
               <div style={styles.item}>
-                <a to="#0">Pricing</a>
+                <a href="#pricing" to="#0">Pricing</a>
               </div>
               <div style={styles.item}>
-                <a to="#0">Legacy Systems</a>
+                <a href="#legacySystems" to="#0">Legacy Systems</a>
               </div>
             </div>
           </h4>
