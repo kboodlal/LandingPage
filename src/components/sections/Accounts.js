@@ -14,7 +14,7 @@ const defaultProps = {
   ...SectionProps.defaults,
 };
 
-const Hero = ({
+const Accounts = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -60,16 +60,12 @@ const Hero = ({
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              NOBLE
+              NOBLE Accounts
             </h1>
-            <h3 style={styles.sub_header}>
-              Naval Operational Business Logistics Environment
-            </h3>
             <div className="container-xs">
               <p
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="400"
-                style={styles.sub_header}
               >
                 We get you from prototype to production so you can focus on
                 other things.
@@ -82,7 +78,7 @@ const Hero = ({
                     wideMobile
                     href="https://cruip.com/"
                   >
-                    Contact Us
+                    Get started
                   </Button>
                 </ButtonGroup>
               </div>
@@ -121,14 +117,7 @@ const Hero = ({
   );
 };
 
-Hero.propTypes = propTypes;
-Hero.defaultProps = defaultProps;
+Accounts.propTypes = propTypes;
+Accounts.defaultProps = defaultProps;
 
-const styles = {
-  sub_header: {
-    position: "relative",
-    top: "-40px",
-  },
-};
-
-export default Hero;
+export default Accounts;
